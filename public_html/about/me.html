@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Mathematics</title>
+    <meta name="description" content="Student's page for computer tech labs" />
+    <meta name="author" content="MMurray" />
+
+    <meta property="og:title" content="UAM - WMI - Michal Murray" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" />
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="play.js"></script>
+</head>
+
+<body>
+
+    <body>
+        <main>
+            <canvas class="myCanvas">
+                <p>No canvas support</p>
+            </canvas>
+
+            <script>
+
+                const canvas = document.querySelector('.myCanvas');
+                const width = canvas.width = window.innerWidth;
+                const height = canvas.height = window.innerHeight;
+                const ctx = canvas.getContext('2d');
+
+                ctx.fillStyle = 'rgb(0,50,0)';
+                ctx.fillRect(0, 0, 0.5*width, 0.5*height);
+                
+
+            </script>
+
+        </main>
+    </body>
+</body>
+
+</html>
