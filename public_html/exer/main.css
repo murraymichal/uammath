@@ -1,41 +1,59 @@
 body {
-    font-family: "Noto Sans", sans;
-    font-size: 14px;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: rgb(233, 229, 215);
-  }
-  header {
-    height: 10%;
-    padding: 3%;
-    margin: 3%;
-    font-size: 1.2rem;
-    text-align: center;
-  }
-  main {
-    height: 65%;
-    display: block;
+  font-family: "Noto Sans", sans;
+  font-size: 14px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: rgb(233, 229, 215);
+}
 
-  }
-  footer {
-    justify-self: center;
-    justify-content: center;
-    text-align: center;
-    height: 5%;
-    padding: 1%;
-    margin: 2%;
-    font-size: 0.75rem
-  }
-  
-  #play {
-      width: 80px;
-      height: 60px;
-      border-width: 2px;
-  }
+.flex-grid {
+  display: flex;
+}
 
-  #svgcontainer {
-    padding: auto;
-  }
+.col {
+  flex: auto;
+}
+
+header {
+  height: 10%;
+  padding: 3%;
+  margin: 3%;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+main {
+  height: 65%;
+  display: block;
+}
+img {
+  float: 'left';
+}
+footer {
+  justify-self: center;
+  justify-content: center;
+  text-align: center;
+  height: 5%;
+  padding: 1%;
+  margin: 2%;
+  font-size: 0.75rem
+}
+
+button {
+  height: 3rem;
+  width: 6rem;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #dfcbcb;
+  margin: 0 0.5em 0.5em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 400;
+  color: #112422;
+  text-align: center;
+  transition: all 0.2s;
+}

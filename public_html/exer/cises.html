@@ -1,69 +1,115 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>A Basic HTML5 Template</title>
-  <meta name="description" content="A simple HTML5 Template for new projects.">
-  <meta name="author" content="SitePoint">
+    <title>Zadania na zajęcia</title>
+    <meta name="description" content="A simple HTML5 Template for new projects." />
+    <meta name="author" content="SitePoint" />
 
-  <meta property="og:title" content="A Basic HTML5 Template">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
-  <meta property="og:description" content="A simple HTML5 Template for new projects.">
-  <meta property="og:image" content="image.png">
+    <meta property="og:title" content="Exercises" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/" />
+    <meta property="og:description" content="A simple HTML5 Template for new projects." />
+    <meta property="og:image" content="image.png" />
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans" />
+    <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-    <div> <label for="image">1a</label>
-        <img src='1a.png'/>
+
+    <label for="1a"><a><button id="1a">1a</button></a></label>
+    <img name="1a" src="./1a.png" hidden />
     </div>
-    <div> <label for="image">1b</label>
-        <img src='1b.png'/>
+    <div>
+        <label for="1b"><a><button id="1b">1b</button></a></label>
+        <img name="1b" src="./1b.png" hidden />
     </div>
-    <div> <label for="image">1c</label>
-        <img src='1c.png'/>
+    <div>
+        <label for="1c"><a><button id="1c">1c</button></a></label>
+        <img name="1c" src="./1c.png" hidden />
     </div>
-    <div> <label for="image">1d</label>
-        <img src='1d.png'/>
-    </div >
-    <div> <label for="image">2a</label>
-        <img src='2a.png'/>
-    </div> 
-    <div> <label for="image">2a</label>
-        <img src='2a.png'/>
-    </div> 
-    <div> <label for="image">2a</label>
-        <img src='2a.png'/>
-    </div> 
-      <div> <label for="image">2a</label>
-        <img src='2a.png'/>
+    <div>
+        <label for="2a"><a><button id="2a">2a</button></a></label>
+        <img name="2a" src="./2a.png" hidden />
     </div>
-     <div> <label for="image">2a</label>
-        <img src='2a.png'/>
+    <div>
+        <label for="2b"><a><button id="2b">2b</button></a></label>
+        <img name="2b" src="./2b.png" hidden />
     </div>
-     <div> <label for="image">2a</label>
-        <img src='2a.png'/>
+    <div>
+        <label for="2c"><a><button id="2c">2c</button></a></label>
+        <img name="2c" src="./2c.png" hidden />
     </div>
-     <div> <label for="image">2a</label>
-        <img src='2a.png'/>
+    <div>
+        <label for="2d"><a><button id="2d">2d</button></a></label>
+        <img name="2d" src="./2d.png" hidden />
     </div>
-     <div> <label for="image">2a</label>
-        <img src='2a.png'/>
+    <div>
+        <label for="3aa"><a><button id="3aa">3aa</button></a></label>
+        <img name="3aa" src="./3aa.png" hidden />
     </div>
-     <div> <label for="image">2a</label>
-        <img src='2a.png'/>
+    <div>
+        <label for="3ab"><a><button id="3ab">3ab</button></a></label>
+        <img name="3ab" src="./3ab.png" hidden />
     </div>
-   
+    <div>
+        <label for="3ba"><a><button id="3ba">3ba</button></a></label>
+        <img name="3ba" src="./3ba.png" hidden />
+    </div>
+    <div>
+        <label for="3bb"><a><button id="3bb">3bb</button></a></label>
+        <img name="3bb" src="./3bb.png" hidden />
+    </div>
+    <div>
+        <label for="4a"><a><button id="4a">4a</button></a></label>
+        <img name="4a" src="./4a.png" hidden />
+    </div>
+    <div>
+        <label for="4b"><a><button id="4b">4b</button></a></label>
+        <img name="4b" src="./4b.png" hidden />
+    </div>
 </body>
+
+<script lang="javascript">
+    let els = ['1a', '1b', '1c', '2a', '3aa',
+        '2b',
+        '3ab',
+        '3ba',
+        '4a',
+        '4b',
+        '2c',
+        '2d',
+        '3bb']
+
+    els.forEach((el) => {
+        var elm = document.getElementById(el)
+        document.getElementById(el).addEventListener('click', (event) => {
+            var element = event.currentTarget;
+            element.clicks = (element.clicks || 0);
+            if (element.clicks % 2 === 0) {
+                document.querySelector(`img[name="${el}"]`).hidden = false
+            } else {
+                document.querySelector(`img[name="${el}"]`).hidden = true
+            }
+            element.clicks = (element.clicks || 0);
+
+        })
+    })
+
+
+    document.getElementById('4b').addEventListener('click', () => {
+        for (el of document.getElementsByTagName('img')) {
+
+        }
+    })
+</script>
 
 </html>
